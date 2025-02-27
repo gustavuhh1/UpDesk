@@ -9,8 +9,17 @@ import jakarta.persistence.Id;
 @Entity
 public class Usuario extends Pessoa{
 
+    private Usuario usuario;
 
-    public Usuario(int id, String endereco, String name, String email, String phone, String cpf) {
-        super(id, endereco, name, email, phone, cpf);
+    public Usuario(){
+        super();
     }
+
+    private Usuario getInstance(){
+        if(this.usuario == null){
+            this.usuario = new Usuario();
+        }
+        return usuario;
+    }
+
 }
