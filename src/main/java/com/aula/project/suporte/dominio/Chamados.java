@@ -25,5 +25,5 @@ public class Chamados implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
-    private Usuario usuario;
+    private Cliente usuario;
 }
